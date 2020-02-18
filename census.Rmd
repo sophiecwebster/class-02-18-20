@@ -20,9 +20,10 @@ enrollment %>%
     select(course_department, total) %>%
     group_by(course_department) %>%
     summarize(dep_enrollment = sum(total)) %>%
-    arrange(desc(dep_enrollment)) %>% slice(1:5) %>%
+    arrange(desc(dep_enrollment)) %>% slice(2:6) %>%
     gt()
 ```
+
 ```{r}
 
 ```
