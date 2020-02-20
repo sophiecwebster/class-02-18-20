@@ -25,6 +25,10 @@ enrollment %>%
 ```
 
 ```{r}
+spring_enroll <- read_excel("./class_enrollment_summary_by_term_3.22.19_0.xlsx", skip = 3) %>% clean_names() %>% filter(!is.na(course_name))
+```
 
+```{r}
+new_courses <- enrollment %>% anti_join(spring_enroll, by = "course_id")
 ```
 
